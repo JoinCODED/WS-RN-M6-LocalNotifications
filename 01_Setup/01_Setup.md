@@ -14,15 +14,15 @@ expo install @notifee/react-native
 }
 ```
 
-3. Run this command in your terminal:
+3. Run this command in your terminal depending on your platform:
+
+   - iOS: `expo run:ios`
+   - Android: `expo run:android`
+
+It will ask for a package name, enter: `Water.App`.
+
+4. Run this command in your terminal:
 
 ```shell
 expo prebuild
 ```
-
-It will ask for a package name, enter: `Water.App`.
-
-4. Run this command in your terminal depending on your platform:
-
-   - iOS: `expo build:ios`
-   - Android: `expo build:android`
