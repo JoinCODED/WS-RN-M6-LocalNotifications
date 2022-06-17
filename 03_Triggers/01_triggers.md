@@ -4,12 +4,17 @@
 
 ```js
 async function onCreateTriggerNotification() {
+  const channelId = await notifee.createChannel({
+    id: 'default',
+    name: 'Default Channel',
+  });
+
   await notifee.createTriggerNotification({
     id: 'default',
     title: 'Reminder',
     body: 'Drink a cup of water!',
     android: {
-      channelId: 'Default Channel',
+      channelId,
     },
   });
 }
@@ -25,7 +30,7 @@ async function onCreateTriggerNotification() {
       title: 'Meeting with Jane',
       body: 'Today at 11:20am',
       android: {
-        channelId: 'Default Channel',
+        channelId,
       },
     },
     {
